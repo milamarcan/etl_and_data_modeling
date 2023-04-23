@@ -8,7 +8,7 @@ They would like to have a Postgres database with tables designed to optimize que
 ETL pipeline is done using Python.
 
 ## Logical Data Model for the project
-[![Data Model for ETL Sparkify project](/img/DataModelSparkify.png)]
+![Data Model for ETL Sparkify project](/img/DataModelSparkify.png)
 
 ## Overview of the files in the repository
 - 'create_tables.py': drops and creates tables.
