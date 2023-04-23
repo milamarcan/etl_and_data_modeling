@@ -1,0 +1,11 @@
+[postgres_def]
+host = 127.0.0.1
+dbname =  defdb
+user = default1
+password = default1
+
+[postgres_db1]
+host = 127.0.0.1
+dbname =  database1db
+user = database1
+password = database1
