@@ -23,8 +23,7 @@ def process_song_file(cur, filepath):
         cur: the cursor object
         filepath: song data file path
 
-    Returns:
-        None
+    Returns: None
     """
 
     # open song file
@@ -62,8 +61,7 @@ def process_log_file(cur, filepath):
         cur: the cursor object
         filepath: log data file path
 
-    Returns:
-        None
+    Returns: None
     """
 
     # open log file
@@ -85,7 +83,8 @@ def process_log_file(cur, filepath):
         t.dt.year,
         t.dt.weekday,
     ]
-    column_labels = ["start_time", "hour", "day", "week", "month", "year", "weekday"]
+    column_labels = ["start_time", "hour", "day",
+                     "week", "month", "year", "weekday"]
     time_df = pd.DataFrame(dict(zip(column_labels, time_data)))
 
     for i, row in time_df.iterrows():
@@ -135,8 +134,7 @@ def process_data(cur, conn, filepath, func):
         filepath: path to the data file
         func: function that transforms the data and inserts it into the database.
 
-    Returns:
-        None
+    Returns: None
     """
 
     # get all files matching extension from directory
@@ -162,11 +160,9 @@ def main():
     Description: connects to the database, gets a cursor, defines where to take the data to process,
     closes the connection
 
-    Arguments:
-        None
+    Arguments: None
 
-    Returns:
-        None
+    Returns: None
     """
     conn = psycopg2.connect(
         "host=db_host dbname=db_name user=db_user password=db_password"

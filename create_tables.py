@@ -34,7 +34,8 @@ def create_database():
 
     # create new database with UTF8 encoding
     cur.execute("DROP DATABASE IF EXISTS db_name")
-    cur.execute("CREATE DATABASE db_name WITH ENCODING 'utf8' TEMPLATE template0")
+    cur.execute(
+        "CREATE DATABASE db_name WITH ENCODING 'utf8' TEMPLATE template0")
 
     # close connection to default database
     conn.close()
@@ -50,7 +51,7 @@ def create_database():
 
 def drop_tables(cur, conn):
     """
-    Drops each table using the queries in `drop_table_queries` list.
+    Drops each table using queries in 'drop_table_queries' list.
     """
     for query in drop_table_queries:
         cur.execute(query)
@@ -59,14 +60,13 @@ def drop_tables(cur, conn):
 
 def create_tables(cur, conn):
     """
-    Description: Drops each table using the queries in `drop_table_queries` list.
+    Description: Creates each table using queries in 'drop_table_queries' list.
 
     Arguments:
         cur: the cursor object
         conn: connection to the database
 
-    Returns:
-        None
+    Returns: None
     """
     for query in create_table_queries:
         cur.execute(query)
@@ -79,11 +79,9 @@ def main():
     with the database and gets cursor to it; drops all the tables;
     creates all tables needed; closes the connection.
 
-    Arguments:
-        None
+    Arguments: None
 
-    Returns:
-        None
+    Returns: None
     """
     cur, conn = create_database()
 
