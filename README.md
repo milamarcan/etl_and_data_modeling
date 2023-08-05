@@ -8,6 +8,9 @@ A startup called Sparkify wants to analyze the data they've been collecting on s
 
 They would like to have a Postgres database with tables designed to optimize queries on song play analysis. The goal is to create a database schema and ETL pipeline for this analysis. The database and ETL pipeline also should be tested by running queries given by the analytics team from Sparkify.
 
+## High-level architecture of the project
+![Project architecture](img/Sparkify_architecture.jpg)
+
 ## Logical Data Model for the project
 ![Data Model for ETL Sparkify project](/img/DataModelSparkify.png)
 
